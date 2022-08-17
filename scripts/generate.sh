@@ -19,7 +19,7 @@ generate_sdk() {
         $oas_file_name -o $output_path \
         --package-name="$package_name" \
         --ignore-file-override=.openapi-generator-ignore \
-        --template-dir _templates/python \
+        --template-dir ./.templates/python \
         --package-name=$package_name
 
 }

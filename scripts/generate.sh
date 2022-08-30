@@ -24,8 +24,8 @@ generate_sdk() {
 
 }
 
-OPENAPI_FILENAME="openapi/kas-fleet-manager.yaml"
+OPENAPI_FILENAME=".openapi/kas-fleet-manager.yaml"
 PACKAGE_NAME="rhoas_kafka_mgmt_sdk"
-OUTPUT_PATH="test/kafka_mgmt_sdk"
+OUTPUT_PATH="test"
 
 generate_sdk $OPENAPI_FILENAME $OUTPUT_PATH $PACKAGE_NAME

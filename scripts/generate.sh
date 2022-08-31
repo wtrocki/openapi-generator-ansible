@@ -25,7 +25,12 @@ generate_sdk() {
 }
 
 OPENAPI_FILENAME=".openapi/kas-fleet-manager.yaml"
-PACKAGE_NAME="rhoas_kafka_mgmt_sdk"
-OUTPUT_PATH="test"
+PACKAGE_NAME="module"
+OUTPUT_PATH="build/generated"
 
 generate_sdk $OPENAPI_FILENAME $OUTPUT_PATH $PACKAGE_NAME
+
+mkdir -p build/ansible/plugins/module
+cp build/generated/module/api/* build/ansible/plugins/module
+cp build/generated/requirements.txt build/ansible/requirements.txt
+rm -Rf build/generated
